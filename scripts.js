@@ -4,7 +4,10 @@ const imageSources = [
     'img2.jpeg',
     'img3.jpeg',
     'jannokk.jpeg',
-    'heart.png'
+    'heart.png',
+    'js.jpeg',
+    's.jpeg',
+    'ssjj.jpeg'
   ];
   
   function createImage() {
