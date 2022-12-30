@@ -30,3 +30,28 @@ function shuffle(array) {
   
   button.addEventListener('click', shuffleSentences);
   
+////
+
+const imageSources = [
+    'maša.jpeg',
+    'img1.jpeg',
+    'img2.jpeg',
+    'img3.jpeg',
+    'jannokk.jpeg'
+  ];
+  
+  function createImage() {
+    const image = document.createElement('img');
+    const randomIndex = Math.floor(Math.random() * imageSources.length);
+    image.src = imageSources[randomIndex];
+    image.style.left = `${Math.random() * 100}%`;
+    image.style.top = `${Math.random() * 100}%`;
+    image.style.animationDelay = `${Math.random() * 10}s`;
+    document.getElementById('image-container').appendChild(image);
+    image.addEventListener('animationend', () => {
+      image.remove();
+      createImage();
+    });
+  }
+  
+  createImage();
